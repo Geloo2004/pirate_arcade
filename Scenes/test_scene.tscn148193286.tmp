@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bj5rffegw2scm"]
+
+[ext_resource type="PackedScene" uid="uid://2qfedob0aco3" path="res://Scenes/ship.tscn" id="1_3dogw"]
+[ext_resource type="Script" uid="uid://cgie3srrylkf1" path="res://Scipts/Controllers/ai_controller.gd" id="2_r5l72"]
+[ext_resource type="Script" uid="uid://chokaaio27scy" path="res://Scipts/Controllers/player_controller.gd" id="3_50ct6"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_3dogw"]
+vertices = PackedVector2Array(1051.8125, 18.867188, 345.21875, 547.5781, -732.1875, 414.0078, -828.28125, -248.82031, -398.3828, -599.0469, 427.89063, -610.9297)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-839, -253, -402, -609, 432, -621, 1067, 20, 348, 558, -741, 423)])
+
+[node name="testScene" type="Node2D" unique_id=7755128]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=724743033]
+position = Vector2(0, -8)
+zoom = Vector2(0.5, 0.5)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1716581746]
+position = Vector2(0, 2)
+navigation_polygon = SubResource("NavigationPolygon_3dogw")
+
+[node name="Player_Controller" type="Node2D" parent="NavigationRegion2D" unique_id=412918945 node_paths=PackedStringArray("ship")]
+position = Vector2(201, -2)
+script = ExtResource("3_50ct6")
+ship = NodePath("Ship")
+
+[node name="Ship" parent="NavigationRegion2D/Player_Controller" unique_id=1447410683 instance=ExtResource("1_3dogw")]
+rotationSpeed = 30.0
+speed = 180.0
+
+[node name="AI_Controller" type="Node2D" parent="NavigationRegion2D" unique_id=2146002936 node_paths=PackedStringArray("target", "controlled_ship")]
+position = Vector2(-544, 0)
+script = ExtResource("2_r5l72")
+target = NodePath("../Player_Controller/Ship")
+controlled_ship = NodePath("Ship2")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NavigationRegion2D/AI_Controller" unique_id=1885788071]
+avoidance_enabled = true
+radius = 200.0
+neighbor_distance = 1000.0
+time_horizon_agents = 3.0
+debug_path_custom_color = Color(1, 0, 0, 1)
+
+[node name="Ship2" parent="NavigationRegion2D/AI_Controller" unique_id=491582534 instance=ExtResource("1_3dogw")]
+rotationSpeed = 30.0
+speed = 180.0
+
+[node name="AI_Controller2" type="Node2D" parent="NavigationRegion2D" unique_id=1186317136 node_paths=PackedStringArray("target", "controlled_ship")]
+script = ExtResource("2_r5l72")
+target = NodePath("../Player_Controller/Ship")
+controlled_ship = NodePath("Ship2")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="NavigationRegion2D/AI_Controller2" unique_id=396824492]
+avoidance_enabled = true
+radius = 200.0
+neighbor_distance = 1000.0
+time_horizon_agents = 3.0
+debug_path_custom_color = Color(1, 0, 0, 1)
+
+[node name="Ship2" parent="NavigationRegion2D/AI_Controller2" unique_id=1740192483 instance=ExtResource("1_3dogw")]
+rotationSpeed = 30.0
+
+[connection signal="velocity_computed" from="NavigationRegion2D/AI_Controller/NavigationAgent2D" to="NavigationRegion2D/AI_Controller" method="_on_navigation_agent_2d_velocity_computed"]

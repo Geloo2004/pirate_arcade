@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DEVELOPMENT\\GODOT\\GodotProjects\\arcade-pirates\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D34DCA28-B652-4F42-91BB-13EF4B27CE03}|arcadePirates.csproj|d:\\development\\godot\\godotprojects\\arcade-pirates\\scipts\\shipmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34DCA28-B652-4F42-91BB-13EF4B27CE03}|arcadePirates.csproj|solutionrelative:scipts\\shipmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ShipMovement.cs",
+              "DocumentMoniker": "D:\\DEVELOPMENT\\GODOT\\GodotProjects\\arcade-pirates\\Scipts\\ShipMovement.cs",
+              "RelativeDocumentMoniker": "Scipts\\ShipMovement.cs",
+              "ToolTip": "D:\\DEVELOPMENT\\GODOT\\GodotProjects\\arcade-pirates\\Scipts\\ShipMovement.cs",
+              "RelativeToolTip": "Scipts\\ShipMovement.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowD4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-18T14:12:21.868Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

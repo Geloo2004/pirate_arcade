@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://tcqmx6uvuavs"]
+
+[ext_resource type="Script" uid="uid://bnom8fdifq6jq" path="res://Scipts/Testing/Nav/trajectory_builder.gd" id="1_3vfr5"]
+
+[node name="TrajectoryBuilderTest" type="Node2D" unique_id=2023644365 node_paths=PackedStringArray("trajectory_line", "tangent0", "tangent1")]
+script = ExtResource("1_3vfr5")
+trajectory_line = NodePath("CircleLine2D")
+tangent0 = NodePath("tangent0")
+tangent1 = NodePath("tangent1")
+
+[node name="CircleLine2D" type="Line2D" parent="." unique_id=979620748]
+closed = true
+width = 3.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1962834692]
+
+[node name="tangent0" type="Line2D" parent="." unique_id=1476453635]
+width = 2.0
+
+[node name="tangent1" type="Line2D" parent="." unique_id=1903140995]
+width = 2.0

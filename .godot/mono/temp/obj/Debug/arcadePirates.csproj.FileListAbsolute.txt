@@ -1,0 +1,17 @@
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\bin\Debug\arcadePirates.deps.json
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\bin\Debug\arcadePirates.runtimeconfig.json
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\bin\Debug\arcadePirates.dll
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\bin\Debug\arcadePirates.pdb
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\bin\Debug\GodotSharp.dll
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\arcadePirates.csproj.AssemblyReference.cache
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\arcadePirates.GeneratedMSBuildEditorConfig.editorconfig
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\arcadePirates.AssemblyInfoInputs.cache
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\arcadePirates.AssemblyInfo.cs
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\arcadePirates.csproj.CoreCompileInputs.cache
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\arcadePi.14A4036C.Up2Date
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\arcadePirates.dll
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\refint\arcadePirates.dll
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\arcadePirates.pdb
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\arcadePirates.genruntimeconfig.cache
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\ref\arcadePirates.dll

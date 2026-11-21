@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bj5rffegw2scm"]
+
+[ext_resource type="PackedScene" uid="uid://2qfedob0aco3" path="res://Scenes/ship.tscn" id="1_3dogw"]
+[ext_resource type="Script" uid="uid://chokaaio27scy" path="res://Scipts/Controllers/player_controller.gd" id="3_50ct6"]
+
+[node name="testScene" type="Node2D" unique_id=7755128]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=724743033]
+position = Vector2(0, -8)
+zoom = Vector2(1.06, 1.06)
+
+[node name="Player_Controller" type="Node2D" parent="." unique_id=412918945 node_paths=PackedStringArray("ship")]
+position = Vector2(201, 0)
+script = ExtResource("3_50ct6")
+ship = NodePath("Ship")
+
+[node name="Ship" parent="Player_Controller" unique_id=1447410683 instance=ExtResource("1_3dogw")]
+rotation = 1.5707964
+base_velocity = 40.0

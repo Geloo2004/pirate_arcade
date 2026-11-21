@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bcgslk6gq878p"]
+
+[ext_resource type="Script" uid="uid://bqfb2lj52buhp" path="res://Scipts/Testing/Nav/vector_mirror_test.gd" id="1_84qs4"]
+[ext_resource type="Texture2D" uid="uid://dv8wb68inww4s" path="res://Sprites/testCannonball.png" id="2_p0cjg"]
+
+[node name="Node2D" type="Node2D" unique_id=971783310 node_paths=PackedStringArray("target", "a", "b", "bt", "a_line", "b_line")]
+script = ExtResource("1_84qs4")
+target = NodePath("target")
+a = NodePath("a")
+b = NodePath("b")
+bt = NodePath("c")
+a_line = NodePath("aLine")
+b_line = NodePath("bLine")
+a_velocity = 0.0
+b_velocity = 50.0
+a_radius = 50.0
+b_radius = 50.0
+
+[node name="target" type="Sprite2D" parent="." unique_id=270472421]
+position = Vector2(600, 89.00003)
+scale = Vector2(10, 10)
+texture = ExtResource("2_p0cjg")
+
+[node name="a" type="Sprite2D" parent="." unique_id=1116243979]
+position = Vector2(612.00006, 337)
+scale = Vector2(5, 5)
+texture = ExtResource("2_p0cjg")
+
+[node name="b" type="Sprite2D" parent="." unique_id=1279411048]
+position = Vector2(629.00006, 451)
+scale = Vector2(5, 5)
+texture = ExtResource("2_p0cjg")
+
+[node name="c" type="Sprite2D" parent="." unique_id=1359946232]
+position = Vector2(782, 441.00003)
+scale = Vector2(5, 5)
+texture = ExtResource("2_p0cjg")
+
+[node name="aLine" type="Line2D" parent="." unique_id=932221999]
+width = 4.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="bLine" type="Line2D" parent="." unique_id=867512364]
+width = 4.0
+default_color = Color(0, 0, 1, 1)

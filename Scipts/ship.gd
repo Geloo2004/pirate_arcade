@@ -1,0 +1,96 @@
+extends Node2D
+
+class_name Ship
+
+var movement_direction : Vector2 # can be rotated but must always have the same length = 1
+@export var firing_distance : float = 200
+@export var angular_velocity : float = 40
+@export var base_velocity : float = 250
+@export var current_velocity : float = 250
+@export var walked_path_line: Line2D
+@export var next_position_line: Line2D
+@export var target_direction_line: Line2D
+@export var movement_direction_line: Line2D
+@export var fire_directions_line: Line2D
+
+var circle_radius: float
+var firing_directions: Array[Vector2]
+
+func _init() -> void:
+	return
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	angular_velocity = angular_velocity * 2 * PI / 180
+	current_velocity = base_velocity
+	movement_direction = Vector2.from_angle(self.global_rotation)
+	circle_radius = 2 * PI * base_velocity / angular_velocity
+	firing_directions.append(Vector2(0, firing_distance))
+	firing_directions[0] = firing_directions[0].rotated(self.global_rotation)
+	return
+
+# return a position, that will be reached with current movementDir in delta seconds
+func get_next_position(delta: float) -> Vector2:	
+	return global_position
+
+# to move our ship we need time and target_direction
+# we update our movement_direction based on target_direction
+# then move and rotate
+# P.S. for player target_direction = input
+func sail(delta: float, target_direction: Vector2) -> void:
+	if target_direction != Vector2.ZERO:
+		# ROTATION
+		# find the difference between current and required
+		#print('target_direction = ', target_direction, '; movement_direction = ', movement_direction)
+		var angle_to_target = movement_direction.angle_to(target_direction)
+		#print('angle_to_target: ' , angle_to_target * 180 / PI)
+		# find rotation for this frame
+		var rotation_angle = sign(angle_to_target) * delta * angular_velocity
+		# if rotation angle is greater than necessary, set it to angle_to_target
+		if abs(rotation_angle) >= abs(angle_to_target):
+			#print('rotation_angle = angle_to_target')
+			rotation_angle = angle_to_target
+		rotate(rotation_angle)
+		movement_direction = movement_direction.rotated(rotation_angle)
+		firing_directions[0] = firing_directions[0].rotated(rotation_angle)
+	
+	# POSITION
+	#movement_direction
+	global_position += movement_direction * current_velocity * delta
+	
+	# path
+	walked_path_line.add_point(global_position)
+	#display_next_position()
+	show_target_direction(target_direction)
+	show_fire_directions()
+	return
+
+func get_firing_directions() -> Array[Vector2]:
+	return []
+
+func show_movement_direction() -> void:
+	movement_direction_line.clear_points()
+	movement_direction_line.add_point(global_position)
+	movement_direction_line.add_point(global_position + movement_direction*100)
+	return
+	
+#func display_next_position() -> void:
+	#next_position_line.clear_points()
+	#next_position_line.add_point(global_position)
+	#next_position_line.add_point(global_position + next_position)
+	#return	
+
+func show_fire_directions() -> void:
+	fire_directions_line.clear_points()
+	for dir in firing_directions:
+		fire_directions_line.add_point(global_position)
+		fire_directions_line.add_point(global_position + dir )
+	return
+	
+func show_target_direction(target_direction: Vector2) -> void:
+	target_direction_line.clear_points()
+	target_direction_line.add_point(global_position)
+	target_direction_line.add_point(global_position + target_direction * 100)
+	return
+	
+	

@@ -1,0 +1,10 @@
+Line2D
+Camera2D
+Node
+RemoteTransform2D
+Node2D
+NavigationAgent2D
+NavigationRegion2D
+Path2D
+MeshInstance2D
+Sprite2D

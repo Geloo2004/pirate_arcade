@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "GJ9fliduxZ0=",
+  "success": true,
+  "projectFilePath": "D:\\DEVELOPMENT\\GODOT\\GodotProjects\\arcade-pirates\\arcadePirates.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Geloo\\.nuget\\packages\\godot.sourcegenerators\\4.6.0\\godot.sourcegenerators.4.6.0.nupkg.sha512",
+    "C:\\Users\\Geloo\\.nuget\\packages\\godotsharp\\4.6.0\\godotsharp.4.6.0.nupkg.sha512",
+    "C:\\Users\\Geloo\\.nuget\\packages\\godotsharpeditor\\4.6.0\\godotsharpeditor.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

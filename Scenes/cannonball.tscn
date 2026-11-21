@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://pad03sgnkcb2"]
+
+[ext_resource type="Script" uid="uid://4k1rbtayt12h" path="res://Scipts/cannonball_movement.gd" id="1_pid28"]
+[ext_resource type="Texture2D" uid="uid://dv8wb68inww4s" path="res://Sprites/testCannonball.png" id="1_xx61p"]
+
+[sub_resource type="Curve" id="Curve_pid28"]
+bake_resolution = 300
+_data = [Vector2(0, 1), 0.0, -1.0, 0, 1, Vector2(1, 0), -1.0, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_xx61p"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="cannonball" type="Node2D" unique_id=6963228]
+scale = Vector2(8, 8)
+script = ExtResource("1_pid28")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2125527508]
+texture = ExtResource("1_xx61p")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=697347858]
+z_index = -1
+points = PackedVector2Array(0, 0, -25.125, 0)
+width = 4.0
+width_curve = SubResource("Curve_pid28")
+gradient = SubResource("Gradient_xx61p")
