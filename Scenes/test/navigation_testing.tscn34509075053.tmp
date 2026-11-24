@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://baplev84f7jrv"]
+
+[ext_resource type="Script" uid="uid://cnx0q78d00gio" path="res://Scipts/Navigation/navigator.gd" id="1_pu66u"]
+[ext_resource type="PackedScene" uid="uid://2qfedob0aco3" path="res://Scenes/ship.tscn" id="1_vjcgo"]
+[ext_resource type="Script" uid="uid://chokaaio27scy" path="res://Scipts/Controllers/player_controller.gd" id="3_u2smf"]
+
+[node name="navigation_testing" type="Node2D" unique_id=404710296]
+
+[node name="ai_ships" type="Node" parent="." unique_id=553579363 node_paths=PackedStringArray("ai_ships", "target", "line2d_point", "line2d_line", "line2d_target")]
+script = ExtResource("1_pu66u")
+ai_ships = [NodePath("Ship2")]
+repulsion_coefficient = null
+target = NodePath("../PlayerShip")
+line2d_point = NodePath("../point_vector")
+line2d_line = NodePath("../line_vector")
+line2d_target = NodePath("../target_vector")
+
+[node name="Ship2" parent="ai_ships" unique_id=1740192483 instance=ExtResource("1_vjcgo")]
+position = Vector2(-266, -172)
+base_velocity = 200.0
+current_velocity = 30.0
+
+[node name="Ship3" parent="ai_ships" unique_id=2084188924 instance=ExtResource("1_vjcgo")]
+position = Vector2(741, 202)
+rotation = -2.443461
+
+[node name="Ship4" parent="ai_ships" unique_id=1388750172 instance=ExtResource("1_vjcgo")]
+position = Vector2(-249, 239.00002)
+rotation = -0.32463124
+
+[node name="PlayerShip" parent="." unique_id=955318626 instance=ExtResource("1_vjcgo")]
+position = Vector2(1, 4)
+base_velocity = 100.0
+
+[node name="Camera2D" type="Camera2D" parent="PlayerShip" unique_id=856964479 node_paths=PackedStringArray("ship")]
+zoom = Vector2(0.6, 0.6)
+script = ExtResource("3_u2smf")
+ship = NodePath("..")
+
+[node name="target_vector" type="Line2D" parent="." unique_id=1363301555]
+width = 2.0
+
+[node name="point_vector" type="Line2D" parent="." unique_id=754977815]
+width = 5.0
+default_color = Color(0, 1, 0, 1)
+
+[node name="line_vector" type="Line2D" parent="." unique_id=627474870]
+width = 2.0
+default_color = Color(1, 0, 0, 1)

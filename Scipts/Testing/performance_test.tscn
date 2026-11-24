@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cqwpec4l51e3k"]
+
+[ext_resource type="Script" uid="uid://cyiyooutnyj8i" path="res://Scipts/Testing/sin_approximation_test.gd" id="1_0oxrc"]
+
+[node name="Node2D" type="Node2D" unique_id=1905008693 node_paths=PackedStringArray("line", "circle_line")]
+script = ExtResource("1_0oxrc")
+line = NodePath("Line2D")
+circle_line = NodePath("CircleLine2D")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=837575795]
+default_color = Color(1, 0, 0, 1)
+
+[node name="CircleLine2D" type="Line2D" parent="." unique_id=1749683783]
+closed = true
+width = 3.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=461671162]
+zoom = Vector2(0.2, 0.2)

@@ -15,3 +15,4 @@ D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\ref
 D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\arcadePirates.pdb
 D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\arcadePirates.genruntimeconfig.cache
 D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\ref\arcadePirates.dll
+D:\DEVELOPMENT\GODOT\GodotProjects\arcade-pirates\.godot\mono\temp\obj\Debug\arcadePirates.sourcelink.json

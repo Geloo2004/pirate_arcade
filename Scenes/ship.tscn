@@ -3,13 +3,14 @@
 [ext_resource type="Script" uid="uid://ckg85mmxgsmm7" path="res://Scipts/ship.gd" id="1_78pfh"]
 [ext_resource type="Texture2D" uid="uid://tljqbkgp5m3b" path="res://Sprites/ship.png" id="2_4qyt1"]
 
-[node name="Ship" type="Node2D" unique_id=1740192483 node_paths=PackedStringArray("walked_path_line", "next_position_line", "target_direction_line", "movement_direction_line", "fire_directions_line")]
+[node name="Ship" type="Node2D" unique_id=1740192483 node_paths=PackedStringArray("walked_path_line", "next_position_line", "target_direction_line", "fire_directions_line")]
 script = ExtResource("1_78pfh")
 walked_path_line = NodePath("Node/WalkedPath_Line2D")
 next_position_line = NodePath("Node/NextPosition_Line2D")
 target_direction_line = NodePath("Node/TargetDirection_Line2D")
-movement_direction_line = NodePath("Node/MovementDirection_Line2D")
 fire_directions_line = NodePath("Node/FireDirections_Line2D")
+firing_directions = Array[Vector2]([Vector2(0, 200)])
+repulsion_strength = 13.0
 
 [node name="Ship_Sprite2D" type="Sprite2D" parent="." unique_id=1555799196]
 rotation = 1.5707964
@@ -29,12 +30,7 @@ default_color = Color(0, 1, 1, 1)
 [node name="TargetDirection_Line2D" type="Line2D" parent="Node" unique_id=1117792787]
 z_index = -1
 width = 3.0
-default_color = Color(0, 0.87058824, 0.40392157, 1)
-
-[node name="MovementDirection_Line2D" type="Line2D" parent="Node" unique_id=1712537125]
-z_index = -1
-width = 5.0
-default_color = Color(0.6181336, 0.71643937, 1, 1)
+default_color = Color(1, 0.87058824, 0.40392157, 1)
 
 [node name="FireDirections_Line2D" type="Line2D" parent="Node" unique_id=32193611]
 z_index = -1
