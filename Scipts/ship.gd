@@ -17,6 +17,7 @@ var circle_radius: float
 @export var firing_directions: Array[Vector2]
 @export var repulsion_strength: float = 8
 var clear_walked_points: bool = false
+var remembered_firing_direction_index: int = 0
 
 func _init() -> void:
 	return
@@ -32,11 +33,11 @@ func _ready() -> void:
 	return
 
 func _update_firing_directions(angle: float) -> void:
-	print('firing_directions: ', firing_directions[0], ' length = ', firing_directions[0].length())
+	#print('firing_directions: ', firing_directions[0], ' length = ', firing_directions[0].length())
 	var new_firing_directions: Array[Vector2]
 	for firing_direction in firing_directions:
 		var rotated_vector = firing_direction.rotated(angle)
-		print('rotated_vector: ', rotated_vector, ' length = ', rotated_vector.length())
+		#print('rotated_vector: ', rotated_vector, ' length = ', rotated_vector.length())
 		new_firing_directions.append(rotated_vector)
 	firing_directions = new_firing_directions
 	return

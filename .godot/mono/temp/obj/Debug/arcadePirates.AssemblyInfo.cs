@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("arcadePirates")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+696696a389842c0c7f818949d47194d0612c8151")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04b33729b0fb1b652e99023e35f0f5dbe81e1f2e")]
 [assembly: System.Reflection.AssemblyProductAttribute("arcadePirates")]
 [assembly: System.Reflection.AssemblyTitleAttribute("arcadePirates")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

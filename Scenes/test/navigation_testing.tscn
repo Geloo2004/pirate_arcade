@@ -8,24 +8,27 @@
 
 [node name="ai_ships" type="Node" parent="." unique_id=553579363 node_paths=PackedStringArray("ai_ships", "target", "point_line", "line_line", "target_line")]
 script = ExtResource("1_pu66u")
-ai_ships = [NodePath("Ship2")]
+ai_ships = [NodePath("Ship3"), NodePath("Ship2"), NodePath("Ship4"), NodePath("Ship5")]
 target = NodePath("../PlayerShip")
 point_line = NodePath("../point_vector")
 line_line = NodePath("../line_vector")
 target_line = NodePath("../target_vector")
 
 [node name="Ship2" parent="ai_ships" unique_id=1740192483 instance=ExtResource("1_vjcgo")]
-position = Vector2(-631, -96)
-angular_velocity = 0.0
+position = Vector2(-267, 0)
+angular_velocity = 30.0
 base_velocity = 200.0
 current_velocity = 30.0
+firing_directions = Array[Vector2]([Vector2(0, 200), Vector2(0, -200)])
 
 [node name="Ship3" parent="ai_ships" unique_id=2084188924 instance=ExtResource("1_vjcgo")]
-position = Vector2(-139, 146.00002)
-firing_directions = Array[Vector2]([Vector2(0, -200)])
+position = Vector2(271, 0)
+angular_velocity = 10.0
+base_velocity = 150.0
+firing_directions = Array[Vector2]([Vector2(0, -200), Vector2(0, 200)])
 
 [node name="Ship4" parent="ai_ships" unique_id=1388750172 instance=ExtResource("1_vjcgo")]
-position = Vector2(-226, 13.000015)
+position = Vector2(-224, 204)
 rotation = -0.32463124
 
 [node name="Ship5" parent="ai_ships" unique_id=1150177808 instance=ExtResource("1_vjcgo")]
@@ -34,6 +37,7 @@ rotation = 0.48694685
 
 [node name="PlayerShip" parent="." unique_id=955318626 instance=ExtResource("1_vjcgo")]
 position = Vector2(1, 4)
+angular_velocity = 80.0
 base_velocity = 200.0
 firing_directions = Array[Vector2]([Vector2(0, 0)])
 
